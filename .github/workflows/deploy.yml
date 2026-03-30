@@ -7,7 +7,7 @@ on:
 jobs:
   deploy:
     runs-on: self-hosted
-  workflow_dispatch: # <--- Ajoute cette ligne pour activer le bouton manuel
+  workflow_dispatch: # pour le lancement manuel
     inputs:
       reason:
         description: 'Raison du déploiement manuel'

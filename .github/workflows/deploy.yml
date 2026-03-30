@@ -3,16 +3,15 @@ name: tuyau
 on:
   push:
     branches: [ "dev" ]
-
-jobs:
-  deploy:
-    runs-on: self-hosted
   workflow_dispatch: # pour le lancement manuel
     inputs:
       reason:
         description: 'Raison du déploiement manuel'
         required: false
         default: 'azy'
+jobs:
+  deploy:
+    runs-on: self-hosted
 
     steps:
 

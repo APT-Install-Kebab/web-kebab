@@ -1,0 +1,8 @@
+FROM docker.io/debian:trixie
+LABEL description="Serveur nginx basé sur debian"
+RUN apt update -y && apt install nginx -y && apt autoclean -y
+EXPOSE 80
+COPY run-nginx.sh /run-nginx.sh
+RUN chmod -v +x /run-nginx.sh
+CMD ["/run-nginx.sh"]
+

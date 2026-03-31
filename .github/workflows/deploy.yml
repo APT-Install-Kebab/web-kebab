@@ -19,7 +19,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: kill old container 
-        run : sudo docker kill web-kebab
+        run : sudo docker kill kebab-web
       
       - name: create new container 
         run : sudo docker run --detach --rm -p 80:80 --name kebab-web -t 5f9e7f39dee4 
